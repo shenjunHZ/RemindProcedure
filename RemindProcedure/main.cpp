@@ -1,12 +1,12 @@
-#include "RemindProcedure.h"
-#include "commonControl.h"
+#include "RemindProcedure.hpp"
+#include "commonControl.hpp"
 #include "Tools/Dir.h"
 #include "Tools/File.h"
 #include "MessageNotify/MessageNotify.h"
 #include <QtWidgets/QApplication>
 #include <QtGui/QScreen>
 #include <QtCore/QFile>
-#include <QCoreApplication>
+#include <QtCore/QCoreApplication>
 #include <QtCore/QDir>
 
 int main(int argc, char *argv[])
@@ -22,10 +22,6 @@ int main(int argc, char *argv[])
     qreal dpi = screen->logicalDotsPerInch() / 96;
     font.setPixelSize(14 * dpi);
     app.setFont(font);
-
-    // global common component
-   // Common::CGlobalDataCenter::GetInstance().SetCurrentDirPath_UTF8(strCurPath.toUtf8().data());
-   // Common::CGlobalDataCenter::GetInstance().SetCurrentDirPath(strCurPath.toLocal8Bit().data());
 
     // path
     QString strCurrPath = QCoreApplication::applicationDirPath();
@@ -59,6 +55,6 @@ int main(int argc, char *argv[])
         DSGUI::DSMessageNotify::Instance().AddTextNotification(QObject::tr("Application is running!"));
         return 0;
     }
-    w.show();
+    w.exec();
     return app.exec();
 }

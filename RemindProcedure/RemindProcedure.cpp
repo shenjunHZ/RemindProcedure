@@ -1,4 +1,4 @@
-#include "RemindProcedure.h"
+#include "RemindProcedure.hpp"
 #include <QtCore/QRect>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDesktopWidget>
@@ -10,6 +10,7 @@ RemindProcedure::RemindProcedure(QWidget *parent)
     , m_pSharedMemory(nullptr)
 {
     ui.setupUi(this->GetCentralWidget());
+    //this->setWindowFlags(this->windowFlags() | Qt::WindowStaysOnTopHint | Qt::CustomizeWindowHint);
     m_pSharedMemory = new QSharedMemory("Remaind Procedure");
 
     initModule();

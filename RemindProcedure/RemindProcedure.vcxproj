@@ -85,7 +85,7 @@
     <ClCompile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;..\DCMGui;..\C_Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;D:\Develop_Code\Open_Resource\qt_5.10.1_32\5.10.1\msvc2015\include;D:\Develop_Code\Open_Resource\DCMGui;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;..\DCMGui;..\C_Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -94,7 +94,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;..\C_Interface;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Develop_Code\Open_Resource\qt_5.10.1_32\5.10.1\msvc2015\lib;..\C_Interface;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;DSGui.lib;Common.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -103,10 +103,12 @@
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
       <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;..\DCMGui;..\C_Interface;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>D:\Develop_Code\Open_Resource\qt_5.10.1_32\5.10.1\msvc2015</QTDIR>
     </QtMoc>
     <QtUic>
       <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
       <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <QTDIR>D:\Develop_Code\Open_Resource\qt_5.10.1_32\5.10.1\msvc2015</QTDIR>
     </QtUic>
     <QtRcc>
       <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
@@ -115,20 +117,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="commonControl.cpp" />
-    <ClCompile Include="GeneratedFiles\Release\moc_RemindProcedure.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RemindProcedure.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RemindProcedure.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="RemindProcedure.h" />
+    <QtMoc Include="RemindProcedure.hpp" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="RemindProcedure.ui" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="commonControl.h" />
+    <ClInclude Include="commonControl.hpp" />
     <ClInclude Include="GeneratedFiles\ui_RemindProcedure.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

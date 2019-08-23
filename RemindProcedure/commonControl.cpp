@@ -1,4 +1,4 @@
-#include "commonControl.h"
+#include "commonControl.hpp"
 #include "Tools/Dir.h"
 #include "DSGuiGlobalData.h"
 
